@@ -10,8 +10,6 @@ A = [[random.randint(-r,r), random.randint(-r,r), random.randint(-r,r)],
      [random.randint(-r,r), random.randint(-r,r), random.randint(-r,r)], 
      [random.randint(-r,r), random.randint(-r,r), random.randint(-r,r)]]
 
-print(A)
-
 t_i=[0,0,0]
 
 for i in range(3):
@@ -20,21 +18,21 @@ for i in range(3):
 
 print(f'La matriz de coeficientes es: {A}')
 print(f'El vector solución es: [{x},{y},{z}]')
-print(f'El vector resultado es: {t_i}')
+print(f'El vector de términos independientes es: {t_i}')
 
-r_1=''
+# r_1=''
 
-for i in range(3):
-    for j in range(3):
-        if A[i][j] == 1:
-            r_1 += f'x_{j+1}'
-        elif A[i][j] == -1:
-            r_1 += f'-x_{j+1}'
-        elif A[i][j] > 0:
-            r_1 += f'{A[i][j]}x_{j+1}'
-        elif A[i][j] < 0:
-            r_1 += f'{A[i][j]}x_{j+1}'
+# for i in range(3):
+#     for j in range(3):
+#         if A[i][j] == 1:
+#             r_1 += f'x_{j+1}'
+#         elif A[i][j] == -1:
+#             r_1 += f'-x_{j+1}'
+#         elif A[i][j] > 0:
+#             r_1 += f'{A[i][j]}x_{j+1}'
+#         elif A[i][j] < 0:
+#             r_1 += f'{A[i][j]}x_{j+1}'
         
             
 
-print(f'r_1')
+# print(f'r_1')
