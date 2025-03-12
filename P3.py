@@ -1,7 +1,4 @@
 import random
-
-
-
 count = 0
 
 for a in range(-10, 10):
