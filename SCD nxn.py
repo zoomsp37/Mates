@@ -1,6 +1,7 @@
 import random
+import numpy as np
 
-print('Ingrese el tamaño de la matriz cuadrada: ')
+print('Ingrese el tamaño de la matriz de coficientes: ')
 n = int(input())
 
 r=3
@@ -23,15 +24,17 @@ for i in range(n):
         A[i].append(random.randint(-r,r))
 
 ceros = []
+det = np.linalg.det(A)
 
 for i in range(n):
     ceros.append(A[i].count(0))
 
 for i in range(n):
-    while ceros[i] > 3:
-        for j in range(n):
-            A[i][j] = random.randint(-r,r)
-        ceros[i] = A[i].count(0)
+    while det == 0:
+        while ceros[i] > n-1:
+            for j in range(n):
+                A[i][j] = random.randint(-r,r)
+            ceros[i] = A[i].count(0)
 
 t_i = [0]*n
 
@@ -57,7 +60,7 @@ for i in range(n):
             r_1 = r_1 + f'{A[i][j]}' + inc_vec[j]
     r_1 = r_1 + ' = ' + f'{t_i[i]}' +', '
 
-print(f'La matriz de coeficientes es: {A} \n')
+print(f'La matriz de coeficientes es: {A} y su determinante es {int(det)} \n')
 print(f'El vector solución es: {sol_vec} \n')
 print(f'El vector de términos independientes es: {t_i} \n')
 print(f'Los incógnitas son: {inc_vec} \n')
@@ -75,7 +78,3 @@ for i in range(n):
     
 
 print('\end{array} \n \\right) \n $\\\\')
-
-
-
-    
