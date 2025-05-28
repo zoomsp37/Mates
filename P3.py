@@ -10,7 +10,5 @@ for a in range(-10, 10):
                 if a/3 == 1:
                     print(f'\item $x^3 + {int((-a*b-a*c)/2)}x^2 + {int(a*b*c)}x$' + chr(92) + chr(92))
                 
-                print(f'\item ${int(a/3)}x^3 + {int((-a*b-a*c)/2)}x^2 + {int(a*b*c)}x$' + chr(92) + chr(92))
-                count += 1
 
 print(f'{count} polinomios de tercer grado con extremos relativos en valores enteros de x') 
